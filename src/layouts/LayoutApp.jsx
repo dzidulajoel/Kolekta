@@ -7,9 +7,9 @@ function LayoutApp() {
         <>
             <div className='w-full h-[98vh] flex justify-center items-center bg-background space-x-2'>
                 <div className='w-2/12 h-full bg-white rounded-md p-4'><Navbar /></div>
-                <main className='w-10/12 h-full bg-white rounded-md p-4 '>
+                <main className='w-10/12 h-full rounded-md p-4 bg-white'>
                     <Header_app/>
-                    <div className='h-full overflow-y-auto'>
+                    <div className='h-full overflow-y-auto '>
                         <Outlet />
                     </div>
                 </main>

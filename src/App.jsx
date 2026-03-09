@@ -12,7 +12,7 @@ import Statistique from './pages/Statistique'
 import Aide from './pages/Aide'
 import Profil from './pages/Profil'
 import Error404 from './pages/Error404'
-
+import Historique from './pages/Historique'
 
 
 function App() {
@@ -32,6 +32,7 @@ function App() {
                             <Route path="statistiques" element={<Statistique />} />
                             <Route path="profil" element={<Profil />} />
                             <Route path="aide" element={<Aide />} />
+                            <Route path="historique" element={<Historique />} />
                         </Route>
                         <Route path="*" element={<Error404 />} />
                     </Routes>
