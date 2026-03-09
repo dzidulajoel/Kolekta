@@ -23,7 +23,7 @@ function App() {
                     <Routes>
                         <Route path="/kolekta" element={<LayoutApp />}>
                             <Route index element={<Dashboard />} />
-                            <Route path="comissions" element={<Comission />} />
+                            <Route path="commissions" element={<Comission />} />
                             <Route path="notifications" element={<Notification />} />
                             <Route path="parametres" element={<Parametre />} />
                             <Route path="cotisations" element={<Cotisation />} />

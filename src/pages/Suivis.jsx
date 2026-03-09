@@ -2,6 +2,7 @@ import Body_page from '../layouts/Body_page'
 import { ArrowDownWideNarrow, ChevronRight, HandCoins } from 'lucide-react'
 import { motion } from "framer-motion"
 import Table from '../components/Table'
+import Pagination from '../components/Pagination'
 function Suivis() {
 
     const linkStyle = "flex justify-center items-center bg-gray-100 rounded-md hover:bg-gray-200 w-8 h-6 cursor-pointer"
@@ -44,6 +45,7 @@ function Suivis() {
                     <span className="text-sm text-muted-foreground">Gérer les membres avec un retard de payement.</span>
                     <div className="h-[88%] overflow-y-auto scroll-hidden">
                         <Table columns={columns} data={cotisations} />
+                        <Pagination/>
                     </div>
                 </div>
             </Body_page>

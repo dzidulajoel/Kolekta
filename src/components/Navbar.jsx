@@ -25,7 +25,7 @@ function Navbar() {
                 { name: "Cotisations", path: "/kolekta/cotisations", icon: HandCoins },
                 { name: "Membres", path: "/kolekta/membres", icon: UserPlus },
                 { name: "Suivis", path: "/kolekta/suivis", icon: BookAIcon },
-                { name: "Comissions", path: "/kolekta/comissions", icon: Coins },
+                { name: "Commissions", path: "/kolekta/commissions", icon: Coins },
                 { name: "Statistiques", path: "/kolekta/statistiques", icon: ChartNoAxesColumnDecreasing },
                 { name: "Notifications", path: "/kolekta/notifications", icon: Bell },
                 { name: "Historique", path: "/kolekta/historique", icon: FolderClock }
@@ -33,7 +33,7 @@ function Navbar() {
         ]
 
         const menuBottom = [
-                { name: "Parametre", path: "/kolekta/parametres", icon: Settings },
+                { name: "Paramètres", path: "/kolekta/parametres", icon: Settings },
                 { name: "Profil", path: "/kolekta/profil", icon: UserRoundPen },
                 { name: "Aide", path: "/kolekta/aide", icon: Info },
                 { name: "Déconnexion", path: "/kolekta/deconnexion", icon: LogOut }

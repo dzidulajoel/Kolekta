@@ -4,38 +4,38 @@ import Body_page from "../layouts/Body_page";
 
 function Membre() {
     const membres = [
-        { id: 1, nom: "Jean Kossi" },
-        { id: 2, nom: "Ama Lawson" },
-        { id: 3, nom: "David Mensah" },
-        { id: 4, nom: "Sarah Johnson" },
-        { id: 5, nom: "Koffi Agbodan" },
-        { id: 6, nom: "Maria Gomez" },
-        { id: 7, nom: "Samuel Adjaho" },
-        { id: 8, nom: "Linda Brown" },
-        { id: 9, nom: "Patrick Yao" },
-        { id: 10, nom: "Esther Mensimah" },
-        { id: 11, nom: "Michael Smith" },
-        { id: 12, nom: "Akouvi Dossou" },
-        { id: 13, nom: "Kevin Lawson" },
-        { id: 14, nom: "Jessica Taylor" },
-        { id: 15, nom: "Yaw Boateng" },
-        { id: 16, nom: "Daniel Kouassi" },
-        { id: 17, nom: "Sandra Williams" },
-        { id: 18, nom: "Kossi Amegan" },
-        { id: 19, nom: "Paul Johnson" },
-        { id: 20, nom: "Akossiwa Mensah" },
-        { id: 21, nom: "George Anderson" },
-        { id: 22, nom: "Mawuli Kpeglo" },
-        { id: 23, nom: "Nadia Laurent" },
-        { id: 24, nom: "Richard Gomez" },
-        { id: 25, nom: "Viviane Lawson" },
-        { id: 26, nom: "Kokou Agbleze" },
-        { id: 27, nom: "Fatima Diallo" },
-        { id: 28, nom: "Lucas Martin" },
-        { id: 29, nom: "Nathalie Mensah" },
-        { id: 30, nom: "Eric Johnson" },
-        { id: 31, nom: "Afi Dede" },
-        { id: 32, nom: "Sophie Laurent" },
+        { id: 1, nom: "Jean Kossi", image: "https://i.pravatar.cc/150?img=1" },
+        { id: 2, nom: "Ama Lawson", image: "https://i.pravatar.cc/150?img=2" },
+        { id: 3, nom: "David Mensah", image: "https://i.pravatar.cc/150?img=3" },
+        { id: 4, nom: "Sarah Johnson", image: "https://i.pravatar.cc/150?img=4" },
+        { id: 5, nom: "Koffi Agbodan", image: "https://i.pravatar.cc/150?img=5" },
+        { id: 6, nom: "Maria Gomez", image: "https://i.pravatar.cc/150?img=6" },
+        { id: 7, nom: "Samuel Adjaho", image: "https://i.pravatar.cc/150?img=7" },
+        { id: 8, nom: "Linda Brown", image: "https://i.pravatar.cc/150?img=8" },
+        { id: 9, nom: "Patrick Yao", image: "https://i.pravatar.cc/150?img=9" },
+        { id: 10, nom: "Esther Mensimah", image: "https://i.pravatar.cc/150?img=10" },
+        { id: 11, nom: "Michael Smith", image: "https://i.pravatar.cc/150?img=11" },
+        { id: 12, nom: "Akouvi Dossou", image: "https://i.pravatar.cc/150?img=12" },
+        { id: 13, nom: "Kevin Lawson", image: "https://i.pravatar.cc/150?img=13" },
+        { id: 14, nom: "Jessica Taylor", image: "https://i.pravatar.cc/150?img=14" },
+        { id: 15, nom: "Yaw Boateng", image: "https://i.pravatar.cc/150?img=15" },
+        { id: 16, nom: "Daniel Kouassi", image: "https://i.pravatar.cc/150?img=16" },
+        { id: 17, nom: "Sandra Williams", image: "https://i.pravatar.cc/150?img=17" },
+        { id: 18, nom: "Kossi Amegan", image: "https://i.pravatar.cc/150?img=18" },
+        { id: 19, nom: "Paul Johnson", image: "https://i.pravatar.cc/150?img=19" },
+        { id: 20, nom: "Akossiwa Mensah", image: "https://i.pravatar.cc/150?img=20" },
+        { id: 21, nom: "George Anderson", image: "https://i.pravatar.cc/150?img=21" },
+        { id: 22, nom: "Mawuli Kpeglo", image: "https://i.pravatar.cc/150?img=22" },
+        { id: 23, nom: "Nadia Laurent", image: "https://i.pravatar.cc/150?img=23" },
+        { id: 24, nom: "Richard Gomez", image: "https://i.pravatar.cc/150?img=24" },
+        { id: 25, nom: "Viviane Lawson", image: "https://i.pravatar.cc/150?img=25" },
+        { id: 26, nom: "Kokou Agbleze", image: "https://i.pravatar.cc/150?img=26" },
+        { id: 27, nom: "Fatima Diallo", image: "https://i.pravatar.cc/150?img=27" },
+        { id: 28, nom: "Lucas Martin", image: "https://i.pravatar.cc/150?img=28" },
+        { id: 29, nom: "Nathalie Mensah", image: "https://i.pravatar.cc/150?img=29" },
+        { id: 30, nom: "Eric Johnson", image: "https://i.pravatar.cc/150?img=30" },
+        { id: 31, nom: "Afi Dede", image: "https://i.pravatar.cc/150?img=31" },
+        { id: 32, nom: "Sophie Laurent", image: "https://i.pravatar.cc/150?img=32" },
     ];
     return (
         <>
@@ -54,7 +54,7 @@ function Membre() {
                 <div className="h-[88%] overflow-y-auto scroll-hidden">
                     <div className='flex flex-wrap justify-start items-center gap-6 '>
                         {membres.map((membre) => (
-                            <Membre_card key={membre.id} nom={membre.nom} />
+                            <Membre_card key={membre.id} nom={membre.nom} image={membre.image} />
                         ))}
                     </div>
                     <div className="py-4 flex justify-end items-center">

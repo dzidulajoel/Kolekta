@@ -15,28 +15,28 @@ function Cotisation() {
     const cotisations = [
         {
             nom: "Jean Gaston",
-            montant: "1000",
+            cotisation: "1000 FCFA",
             echeance: "10 / 90",
             statut: <span className={linkStyle_accept}>Payé</span>,
             action: <button className={linkStyle}><ChevronRight  size={16} color="currentColor" /></button>
         },
         {
             nom: "Marie Lawson",
-            montant: "1000",
+            cotisation: "1000 FCFA",
             echeance: "12 / 120",
             statut: <span className={linkStyle_pending}>En cours</span>,
             action: <button className={linkStyle}><ChevronRight  size={16} color="currentColor" /></button>
         },
         {
             nom: "Kossi Mensah",
-            montant: "1000",
+            cotisation: "1000 FCFA",
             echeance: "14 / 90",
             statut: <span className={linkStyle_accept}>Payé</span>,
             action: <button className={linkStyle}><ChevronRight  size={16} color="currentColor" /></button>
         } ,
         {
             nom: "Kossi Mensah",
-            montant: "1000",
+            cotisation: "1000 FCFA",
             echeance: "14 / 30",
             statut: <span className={linkStyle_red}>Impayé</span>,
             action: <button className={linkStyle}><ChevronRight  size={16} color="currentColor" /></button>
@@ -45,7 +45,7 @@ function Cotisation() {
 
     const columns = [
         { header: "Nom", accessor: "nom" },
-        { header: "Montant (FCFA)", accessor: "montant" },
+        { header: "Cotisation", accessor: "cotisation" },
         { header: "Echeance", accessor: "echeance" },
         { header: "Statut", accessor: "statut" },
         { header: "Action", accessor: "action" }
