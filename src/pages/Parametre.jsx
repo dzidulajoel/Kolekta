@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import Body_page from '../layouts/Body_page';
-import { Activity, BookUp, Info, Lock, MonitorSmartphone, Scale, ScreenShare, Settings, Trash, UserCheck, UserPen } from 'lucide-react';
+import { Activity, BookUp, Check, Info, Lock, MonitorSmartphone, Scale, ScreenShare, Settings, Trash, UserCheck, UserPen } from 'lucide-react';
 import { motion } from "framer-motion";
 import NotificationsSettings from '../components/NotificationsSettings';
 import { Link } from 'react-router-dom';
+import Button_action from '../components/Button_action';
 function Parametre() {
 
     const [formData, setFormData] = useState({
@@ -45,16 +46,7 @@ function Parametre() {
         },
     ];
 
-    const [action, setAction] = useState(false);
-    const [pending, setPending] = useState(false);
 
-    const handleAction = () => {
-        setPending(true); // démarrer le pending
-        setTimeout(() => {
-            setAction(!action); // changer l'état après 2s
-            setPending(false);  // fin du pending
-        }, 2000);
-    };
 
 
     return (
@@ -63,26 +55,14 @@ function Parametre() {
                 <div className="flex justify-between items-center">
                     <div className="w-full flex justify-between items-center gap-2">
                         <h1 className='text-2xl text-highlight text-black gap-2 flex justify-start items-center'><Settings size={16} color='#a89af3' />Paramètres</h1>
-                        <motion.button
-                            className="flex justify-center items-center gap-2 text-sm text-white bg-accent p-2 rounded-sm h-8 min-w-[120px] cursor-pointer transition-all"
-                            onClick={handleAction}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                            disabled={pending} // empêche le clic pendant le pending
-                        >
-                            {pending ? (
-                                <motion.div
-                                    className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"
-                                    layout
-                                />
-                            ) : (
-                                <>
-                                    {action ? <UserPen size={16} color="#fff" /> : <UserCheck size={16} color="#fff" />}
-                                    {action ? "Sauvegarder" : "Modifier"}
-                                </>
-                            )}
-                        </motion.button>
+                        <Button_action
+                            antIcon={UserPen}
+                            postIcon={Check}
+                            antAction="Modifier"
+                            postAction="Succès"
+                            antColor="bg-accent"
+                            postColor="bg-green-500"
+                        />
                     </div>
                 </div>
                 <p className="text-sm text-muted-foreground">Gérer vos paramètres et préférences.</p>

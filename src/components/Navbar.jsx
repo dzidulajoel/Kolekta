@@ -34,8 +34,6 @@ function Navbar() {
 
         const menuBottom = [
                 { name: "Paramètres", path: "/kolekta/parametres", icon: Settings },
-                { name: "Profil", path: "/kolekta/profil", icon: UserRoundPen },
-                { name: "Aide", path: "/kolekta/aide", icon: Info },
                 { name: "Déconnexion", path: "/kolekta/deconnexion", icon: LogOut }
         ]
 

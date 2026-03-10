@@ -1,3 +1,5 @@
+import { Calendar } from "lucide-react";
+
 function Notification_card() {
 
     const notifications = [
@@ -38,7 +40,7 @@ function Notification_card() {
                         <div>
                             <p className="text-sm font-semibold">{notif.from} - {notif.type}</p>
                             <p className="text-sm text-gray-600">{notif.message}</p>
-                            <p className="text-xs text-gray-400">{notif.date}</p>
+                            <p className="text-xs text-gray-400 flex gap-1 justify-start items-center mt-2"> <Calendar size={12} color='#6B7280' /> {notif.date}</p>
                         </div>
                         <div className="flex items-center space-x-2">
                             {!notif.read && <span className="w-2 h-2 rounded-full bg-red-500"></span>}

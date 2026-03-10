@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion"
 
 const checkboxOptions = [
         { name: "push", label: "Notifications push" },
@@ -20,21 +21,26 @@ function NotificationsSettings() {
 
         return (
                 <section className="mt-4">
-                        <div className="flex flex-col gap-2">
-                                {checkboxOptions.map((option) => (
-                                        <label key={option.name} className="text-sm flex items-center gap-2">
-                                                <input
-                                                        type="checkbox"
-                                                        name={option.name}
-                                                        checked={checked[option.name]}
-                                                        onChange={handleChange}
-                                                        className="w-4 h-4 accent-[#a89af3] cursor-pointer"
-                                                        accent-
-                                                />
-                                                {option.label}
-                                        </label>
-                                ))}
-                        </div>
+                        <div className="flex flex-wrap gap-1">
+  {checkboxOptions.map((option) => (
+    <motion.label
+      key={option.name}
+      whileTap={{ scale: 0.95 }}
+      whileHover={{ scale: .99 }}
+      transition={{ duration: 0.2 }}
+      className="text-sm w-full max-w-[33%] flex items-center gap-2 border border-gray-200 rounded-sm px-3 py-1 cursor-pointer hover:bg-gray-50"
+    >
+      <input
+        type="checkbox"
+        name={option.name}
+        checked={checked[option.name]}
+        onChange={handleChange}
+        className="w-4 h-4 accent-[#a89af3]"
+      />
+      {option.label}
+    </motion.label>
+  ))}
+</div>
                 </section>
         );
 }

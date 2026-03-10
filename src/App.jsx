@@ -13,6 +13,7 @@ import Aide from './pages/Aide'
 import Profil from './pages/Profil'
 import Error404 from './pages/Error404'
 import Historique from './pages/Historique'
+import Membre_details from './pages/details/Membre_details'
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
                             <Route path="parametres" element={<Parametre />} />
                             <Route path="cotisations" element={<Cotisation />} />
                             <Route path="membres" element={<Membre />} />
+                            <Route path="membres/details" element={<Membre_details />} />
                             <Route path="suivis" element={<Suivis />} />
                             <Route path="statistiques" element={<Statistique />} />
                             <Route path="profil" element={<Profil />} />

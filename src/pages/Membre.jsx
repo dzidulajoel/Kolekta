@@ -1,6 +1,7 @@
 import { ArrowDownWideNarrow, UserPlus } from "lucide-react"
 import Membre_card from "../components/Membre_card"
 import Body_page from "../layouts/Body_page";
+import { useOutletContext } from "react-router-dom";
 
 function Membre() {
     const membres = [
@@ -37,6 +38,7 @@ function Membre() {
         { id: 31, nom: "Afi Dede", image: "https://i.pravatar.cc/150?img=31" },
         { id: 32, nom: "Sophie Laurent", image: "https://i.pravatar.cc/150?img=32" },
     ];
+    const { setOpen } = useOutletContext();
     return (
         <>
             <Body_page>
@@ -45,7 +47,7 @@ function Membre() {
                         <h1 className='text-2xl text-highlight text-black gap-2 flex justify-start items-center'> <UserPlus size={16} color='#a89af3' />Membres</h1>
                         <div className="flex justify-start items-center gap-2">
                             <button className='flex justify-center items-center bg-gray-100 rounded-md hover:bg-gray-100 w-8 h-8'><ArrowDownWideNarrow size={18} color='#6B7280' /></button>
-                            <button className="flex justify-start items-center gap-2 text-sm text-white bg-accent p-2 rounded-sm h-8"> <UserPlus size={16} color='#fff' /> Ajouter un membre</button>
+                            <button className="flex justify-start items-center gap-2 text-sm text-white bg-accent p-2 rounded-sm h-8" onClick={() => setOpen(true)}> <UserPlus size={16} color='#fff' /> Ajouter un membre</button>
                         </div>
                     </div>
                     <span className="text-sm text-muted-foreground">Gérer les membres de votre groupe, ajouter de nouveaux membres, supprimer des membres existants et mettre à jour les informations des membres.</span>
